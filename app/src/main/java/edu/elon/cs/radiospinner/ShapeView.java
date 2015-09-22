@@ -5,11 +5,14 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-/**
- * Created by mwinkler3 on 9/20/2015.
+/*
+ * Created by Michael Winkler
+ * 9/20/2015.
  */
 
 
@@ -18,6 +21,8 @@ public class ShapeView extends View {
     private ArrayList<MyShape> theShapes;
     private String currentShape;
     private String currentColor;
+    private Spinner spinner;
+
 
     public ShapeView (Context context, AttributeSet attrs){
         super(context, attrs);
@@ -27,6 +32,7 @@ public class ShapeView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            currentColor = String.valueOf(spinner.getSelectedItem());
             theShapes.add(new MyShape(event.getX(), event.getY(), currentColor, currentShape));
         }
         return true;
@@ -39,6 +45,10 @@ public class ShapeView extends View {
             shape.draw(canvas);
         }
         invalidate();
+    }
+
+    public void setSpinner(Spinner spinner) {
+        this.spinner = spinner;
     }
 
     public void setCurrentShape (String shape){

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RadioSpinner.iml" filepath="$PROJECT_DIR$/RadioSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Radio-Spinner-App.iml" filepath="$PROJECT_DIR$/Radio-Spinner-App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -3,8 +3,9 @@ package edu.elon.cs.radiospinner;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
-/**
- * Created by mwinkler3 on 9/20/2015.
+/*
+ * Created by Michael Winkler
+ * 9/20/2015.
  */
 public class MyShape {
 

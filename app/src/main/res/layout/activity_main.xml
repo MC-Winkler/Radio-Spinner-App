@@ -60,14 +60,6 @@
                 android:layout_alignParentBottom="true">
             </Spinner>
 
-            <Button
-                android:onClick="onSetColor"
-                android:text="@string/set_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/spinner"
-                android:layout_alignParentBottom="true"/>
-
         </RelativeLayout>
 
     </LinearLayout>

@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
+/*
+ * Created by Michael Winkler
+ * 9/20/2015.
+ */
 
 public class MainActivity extends Activity {
 
@@ -18,6 +22,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         shapeView = (ShapeView) findViewById(R.id.theView);
+        Spinner spinner = (Spinner) findViewById (R.id.spinner);
+        shapeView.setSpinner(spinner);
         RadioButton circleRadio = (RadioButton) findViewById(R.id.circle_radio);
         circleRadio.setChecked(true);
         shapeView.setCurrentShape("Circle");
@@ -47,16 +53,13 @@ public class MainActivity extends Activity {
     }
 
     public void onCircleClick (View view) {
+        //When the radio button labeled "circle" is touched
         shapeView.setCurrentShape("Circle");
     }
 
     public void onSquareClick (View view) {
+        //When the radio button labeled "square" is touched
         shapeView.setCurrentShape("Square");
     }
 
-    public void onSetColor (View view) {
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        shapeView.setCurrentColor(String.valueOf(spinner.getSelectedItem()));
-        System.out.println(String.valueOf(spinner.getSelectedItem()));
-    }
 }
